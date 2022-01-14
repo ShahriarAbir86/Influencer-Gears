@@ -1,0 +1,86 @@
+@webview;
+/*this time our website should be responsive */
+/*design for full size website start here*/
+header-section
+  navbar{
+  logo: mandatory; /*name could be different as our choise*/
+  navbar:optional;
+}
+hero-banner{
+  article-divisiton{
+    heading: mandatory;
+    paragraph:mandatory; /*no lorem ipusm*/
+    button:{
+      icon:mandatory; /*relative to arrow sign*/
+      color:mandatory; /*ralitive to demo site*/
+      text:mandatory; /*as our choice or as it is*/
+    }
+  }
+img-division{
+  img:mandatory; /*camera or our choice-but it should be related to the influencers*/
+  background:optional;
+}
+}
+sponsors-logo-section{
+  !Optional/* you can add if you have time.*/
+}
+Collection-Divistion{
+  /*collection of product should not be less then 6 but it could be more than 9 or just as it is 9.*/
+  every-div{
+    corner:round or solid ;/*doesn\'t matter*/
+    img:mandatory;/*img size will be similar in all div and picture could be changed*/
+    heading:mandatory;
+    price:mandatory;/*price could be changed as our wish*/
+    rating:mandatory; /*star number should be five.*/
+    star-icon:mandatory;/*filling the start could be changed as our wish.five of five should be fine too*/
+    paragraph:mandatory;/* should be meaningful anythin*/
+  }
+  see-more{
+    link:optional;
+    icon:mandatory;/*icon should be and arrow sing to the right*/
+    position-right:mandatory;/*see more position must be in right corner*/
+  }
+}
+last-section{
+  !Optional /*if we don't do this section there will be no problem*/
+}
+footer{
+  !Mandatory 
+  social-media-icon:mandatory; /*minimum three icon must be done any social media icon*/
+  copyright-simble:mandatory; /*must be a copyright simple in our copyright paragraph.*/
+};
+/*design for full website end here*/
+@mobileview;
+/*design for mobile device start here*/
+navbar{
+  menu-icon:optional;
+  heading:mandatory;
+  cart:optional;
+}
+hero-banner{
+  /*1.divistion should be in column direction
+  2.divistion order is not important*/
+}
+collection-division{
+  Every-div: single column;/* direction will be column and one div at a row*/
+};
+/*design for mobile device end here*/
+@tablet;
+/*design for tablet start here*/
+collection-divisiton{
+  every-div: double column /* every row will habe two div*/
+};
+/*design for tablet device end here*/
+/*dont worry about margin gap and padding it is not mandatory to have exactly same but if you can do it .it is fine. the main focus in this assigment is to make our website responsive*/
+extra 10 marks{
+  font awesome to use;
+  google font at least one;
+  no css framerwork;
+  hover effects;
+  html 5 tag to use;
+  css3 to to use;
+  meaningful comment;
+  overall color;
+  last-section;
+  deadline: 15 jan 11:59;
+}
