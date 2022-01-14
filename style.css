@@ -48,12 +48,36 @@ p{
 
 /* Banner Section */
 .banner{
-    display: grid;
-    grid-template-columns: 1fr, 1fr;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px 0px;
+    /* grid-template-columns: 1fr, 1fr; */
 }
 .top-left-banner{
-
+    width: 50%;
+}
+.top-left-banner .banner-img{
+    width: 475px;
+    height: 475px;
+}
+.banner-button{
+    background: var(--button-background-color);
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 15px;
+    font-weight: 500;
+    border: none;
 }
 .top-right-banner{
-
+    width: 50%;
 }
+
+
+
+/* Brands */
+.brands{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 40px 0px;
+    border-top: 1px solid #ebe8e8;
