@@ -70,6 +70,11 @@ h1{
     border: none;
     font-size: 16px;
     margin-top: 16px;
+    transition: .5s;
+}
+.banner-button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .top-right-banner{
     width: 50%;
@@ -89,24 +94,30 @@ h1{
 /*---------- Products-------------- */
 
 .products{
-    padding: 60px 10px;
+    padding: 80px 10px;
 }
 .products-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 15px;
-    margin-top: 30px;
+    grid-column-gap: 20px;
+    grid-row-gap: 25px;
+    margin-top: 40px;
 }
 .product-box{
     padding: 15px;
-    box-shadow: 5px 5px 50px#c4c4cc;
-    width: 329px;
+    box-shadow: 2px 2px 20px#e1e1e6;
+    /* width: 329px; */
     height: 476px;
     border-radius: 10px;
+    transition: .5s;
 }
-.Products-heading{
+.product-box:hover{
+    transform: scale(1.1);
+}
+
+.products>h1{
+
     text-align: center;
     font-size: 28px;
     font-weight: 600;
