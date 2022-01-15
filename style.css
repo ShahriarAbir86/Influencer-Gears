@@ -39,6 +39,26 @@ h1{
     font-size: 16px;
     font-weight: 400;
 } */
+.navbar{
+    display:flex;
+    width: 100%;
+}
+.logo{
+    width: 20%;
+}
+.navigation{
+    width: 70%;
+    align-content: right;
+}
+.navigation ul li{
+    list-style: none;
+    display: inline-block;
+    justify-content: flex-end;
+
+}
+.icons{
+    width: 10%;
+}
 
 .container{
     width:80%;
@@ -48,16 +68,13 @@ h1{
 
 /* Banner Section */
 .banner{
-    display: flex;
-    width: 100%;
+    display: grid;
     align-items: center;
-    padding: 20px 0px;
-    /* grid-template-columns: 1fr, 1fr; */
+    padding: 60px 0px;
+    grid-template-columns: repeat(2,1fr);
 }
-.top-left-banner{
-    width: 50%;
-}
-.top-left-banner .banner-img{
+
+.banner-img img{
     width: 475px;
     height: 475px;
 }
@@ -189,13 +206,45 @@ footer{
 }
 .social-icons{
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
-
-.social-icons ul li{
+.social-icons li{
     list-style: none;
+}
+.social-icons ul li{   
     display: inline-block;
 }
-.social-icons .fab{
-    color: white;
-    ooterfont-size: 16px;
+
+.social-icons li a{
+	font-size: 20px;
+	color: #fff;
+	transition: all 1.5s;
+    margin: 8px 10px;
+}
+.social-icons li a .fa:hover,.social-icons li a .fa:focus {
+	color: var(--button-background-color);
+	transform: scale(1.5);
+}
+
+
+
+
+
+
+
+/------------* RESPONSIVE DESIGN ------ */
+
+/* Mobile  */
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .top-left-banner{
+        width: 100%;
+    }
+    .top-right-banner{
+        width: 100%;
+    }
+    
 }
