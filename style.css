@@ -36,7 +36,7 @@ a, a:hover{
 .container{
     max-width:1200px;
     margin: 0 auto;
-    padding: 0px 30px;
+    padding: 0px 20px;
 }
 /*  */
 
@@ -55,12 +55,13 @@ a, a:hover{
 .navigation ul li{
     list-style: none;
     display: inline-block;
-    margin: 0px 10px;
+    
     font-weight: 600;
     transition: .5s;
 }
 .navigation ul li a{
     padding: 5px 8px;
+    margin: 0px 10px;
 }
 .navigation ul li:hover, .navigation ul li:focus{
     color: var(--button-background-color);
@@ -124,6 +125,10 @@ a, a:hover{
     justify-content: center;
     align-items: flex-end;
 }
+.top-right-banner img{
+    width: 475px;
+    height: 475px;
+}
 
 
 
@@ -135,6 +140,9 @@ a, a:hover{
     border-top: 1px solid #ebe8e8;
     border-bottom: 1px solid #ebe8e8;
 }
+.brands img{
+    width: 50%;
+}
 
 /*---------- Products-------------- */
 
@@ -145,7 +153,6 @@ a, a:hover{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    /* grid-column-gap: 20px; */
     grid-row-gap: 25px;
     margin: 40px 0px;
 }
@@ -157,6 +164,7 @@ a, a:hover{
     border-radius: 10px;
     transition: .5s;
     margin: 0 auto;
+   
 }
 .product-box:hover{
     transform: scale(1.05);
@@ -176,18 +184,21 @@ a, a:hover{
     margin-bottom: 12px;
     align-self: center;
 }
+.product-info{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
 
-.product-info > h3{
+.product-name{
     font-size: 28px;
     font-weight: 600;
-}
-.product-info >h4{
-    font-size: 24px;
-    font-weight: 400;
 }
 .price{
     margin-top: 10px;
     margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 400;
 }
 .rating .checked{
     color:orange;
@@ -198,7 +209,7 @@ a, a:hover{
 .rating p{
     color: #5E6366;
 }
-.product-info p{
+.product-info .product-description{
     font-size: 14px;
     font-weight: 700;
     color: #787885;
@@ -253,59 +264,135 @@ footer{
 }
 .social-icons li a .fa:hover,.social-icons li a .fa:focus {
 	color: var(--button-background-color);
-	transform: scale(1.5);0
+	transform: scale(1.5);
 }
 
+/* ====================================
+===========Responsive Design===========  
+=======================================*/
 
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
 
-
-
-
-
-/------------* RESPONSIVE DESIGN ------ */
-
-/* Mobile  */
-/* @media only screen and (max-width: 688px) {
-
+@media (min-width: 320px) and (max-width: 767px) {
     .container{
-        width: 100%;
+        padding: 0px 5px;
+        margin: 0 auto;
+    }
+    .navbar{
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .navigation ul li a{
+        padding: 5px 2px;
+        margin: 0px;
+   
+    }
+    .banner {
+        grid-template-columns: 1fr;
+        
     }
     .top-left-banner{
-        width: 100%;
+        align-items: center;
+    }
+    .top-left-banner h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .top-left-banner p {
+        font-size: 10px;
+        text-align: center;
+    }
+    .top-left-banner .banner-button{
+        font-size: 12px;
     }
     .top-right-banner{
-        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
     }
-    
+    .top-right-banner img{
+        width: 300px;
+        height: 300px;
+    }
+    .products{
+        padding-bottom: 10px;
+    }
+    .products-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+ 
+    }
+    .product-box {
+        padding: 15px;
+        width: 250px;
+    }
+    .product-img img{
+        width: 250px;
+        height: 205px;
+        margin-bottom: 12px;
+        align-self: center;
+    }
+   
+    .product-name{
+        font-size: 24px;
+    }
+
+    .brands{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    footer{
+        display: visible;
+    }
+
+}
+
+/* @media (min-width: 481px) and (max-width: 767px){
+    .brands {
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    .products-grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr); 
+    }
 } */
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .container{
-        width: 100%;
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar{
+        width: 95%;
     }
-    .banner{
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(2, 1fr);
+    .navigation ul li a{
+        padding: 5px 0px;
+        margin: 0px 5px;
     }
-}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...
-
-
-
-
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...
-
-
-
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...
-
-
-
-
+    .top-left-banner h1 {
+        font-size: 42px;
+    }
+    .top-right-banner img {
+        width: 300px;
+        height: 300px;
+    }
+    .brands {
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    .products-grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr); 
+    }
 }
