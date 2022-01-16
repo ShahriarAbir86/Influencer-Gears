@@ -38,9 +38,13 @@ a, a:hover{
     margin: 0 auto;
     padding: 0px 20px;
 }
-/*  */
+.highlited-text{
+    color: var(--button-background-color);
+}
 
-/* Navbar  */
+/*=====================
+======= Navbar=========
+=======================  */
 .navbar{
     display:flex;
     width: 100%;
@@ -104,10 +108,10 @@ a, a:hover{
     line-height: 1.5;
     margin: 15px 0px;
 }
-.top-left-banner .banner-button{
+ .banner-button{
     background: var(--button-background-color);
     color: #fff;
-    padding: 15px 20px;
+    padding: 12px 20px;
     border-radius: 25px;
     font-weight: 500;
     border: none;
@@ -115,7 +119,7 @@ a, a:hover{
     font-size: 16px;
     transition: .5s;
 }
-.top-left-banner .banner-button:hover{
+.banner-button:hover{
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -132,7 +136,9 @@ a, a:hover{
 
 
 
-/* Brands */
+/* ======================================
+==========Brands=========================
+========================================= */
 .brands{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -144,7 +150,9 @@ a, a:hover{
     width: 50%;
 }
 
-/*---------- Products-------------- */
+/*======================================
+===============Products=================
+========================================*/
 
 .products{
     padding: 80px 10px;
@@ -230,12 +238,68 @@ a, a:hover{
     transform: scale(1.05);
     cursor: pointer;
 }
-
-/* Footer area  */
+/* =====================================
+===============Feature Area ============
+======================================== */
+.featured{
+    
+    padding: 60px 0px;
+    margin-bottom: 60px;
+    
+}
+.feature-box{
+    padding: 15px;
+    box-shadow: 2px 2px 20px#e1e1e6;
+    /* width: 300px;
+    height: 476px; */
+    border-radius: 10px;
+    transition: .5s;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+   
+    grid-column-gap: 40px;
+    transition: 1s;
+}
+.feature-box:hover{
+    transform: translate3d(10px, -13px, 15px);
+}
+.featured .featured-image{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.featured .featured-image img{
+    width:404px;
+    height: 270px;
+}
+.featured .feature-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.feature-info h2{
+    color: var(--text-color);
+    font-size: 40px;
+    margin:0px;
+    font-weight: 700;
+}
+.feature-info p{
+    font-size: 16px;
+    margin: 10px 0px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+/*=============================
+========== Footer area=========
+===============================  */
 footer{
     background: #0A0826;
     color: #fff;
     text-align: center;
+    margin-top: 40px;
 }
 .footer-area{
     padding: 30px 0px;
@@ -262,10 +326,16 @@ footer{
 	transition: all 1.5s;
     margin: 8px 10px;
 }
-.social-icons li a .fa:hover,.social-icons li a .fa:focus {
+.social-icons .icon{
+    transition: .3s;
+}
+.social-icons .icon:hover,.social-icons .icon:focus {
 	color: var(--button-background-color);
 	transform: scale(1.5);
 }
+
+
+
 
 /* ====================================
 ===========Responsive Design===========  
@@ -348,6 +418,29 @@ footer{
         justify-content: center;
         align-items: center;
     }
+    .feature-box{
+        grid-template-columns: 1fr;
+
+    }
+    
+    .featured .featured-image img {
+        width: 340px;
+        height: 200px;
+    }
+    
+    .feature-info h2 {
+        font-size: 24px;
+        margin: 15px 0px;
+    } 
+    .feature-info p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }  
+    .banner-button {
+        padding: 8px 14px;
+        font-size: 13px;
+        margin-bottom: 30px;
+    } 
     footer{
         display: visible;
     }
@@ -394,5 +487,8 @@ footer{
     .products-grid{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(5, 1fr); 
+    }
+    .feature-info h2 {
+        font-size: 37px;
     }
 }
